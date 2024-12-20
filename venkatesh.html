@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkatesh Hegde</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        .nav {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .nav li {
+            margin: 0 15px;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            display: none;
+            margin-bottom: 40px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section.active {
+            display: block;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home'); // Show the home section by default
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav">
+                <li><a onclick="showSection('home')">Home</a></li>
+                <li><a onclick="showSection('resume')">Resume</a></li>
+                <li><a onclick="showSection('biodata')">Bio-Data</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="intro">
+            <h1>Welcome to Venkatesh Hegde's Website</h1>
+            <p>Passionate developer with expertise in web development, app projects, and a commitment to innovation and learning.</p>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume">
+            <h1>Resume</h1>
+            <h2>Summary</h2>
+            <p>Passionate developer with experience in web development and ongoing app development projects, eager to learn new technologies. Enhanced technical and project management skills through a recent internship. Ready to drive innovation in a software engineering role, leveraging hands-on expertise. Committed to continuous learning and making a positive impact in the tech industry.</p>
+
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Bachelor of Engineering – Computer Science & Engineering</strong>, Mangalore Institute of Technology & Engineering (2022-Present), CGPA: 7.5</li>
+                <li><strong>Senior Secondary (12th) – KSEEB</strong> (2020-2022), Percentage: 93%</li>
+                <li><strong>Secondary School (SSLC) – KSEEB</strong> (2018-2020), Percentage: 92.08%</li>
+            </ul>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>Languages: Python, C</li>
+                <li>Interface: HTML, CSS</li>
+                <li>Frameworks: Bootstrap, Tailwind CSS, Django, Express, NodeJS</li>
+                <li>Database: MongoDB, MySQL</li>
+                <li>Tools: Git, GitHub, Visual Studio Code, WordPress</li>
+            </ul>
+
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>E-learning Platform</strong> | Team Project (October-November 2024)
+                    <p>Technologies: HTML, CSS, Node.js. Developed a digital application for educational content and online courses.</p>
+                </li>
+            </ul>
+
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Exploring new things</li>
+                <li>Hiking</li>
+                <li>Volunteer work</li>
+            </ul>
+        </section>
+
+        <!-- Bio-Data Section -->
+        <section id="biodata">
+            <h1>Bio-Data</h1>
+            <h2>Personal Details</h2>
+            <p><strong>Name:</strong> Venkatesh Hegde</p>
+            <p><strong>Contact:</strong> +91 8310243230</p>
+            <p><strong>Email:</strong> Venkateshhegde102@gmail.com</p>
+            <p><strong>Address:</strong> Arya Durga Damodar Kripa, Gandhi Maidan, Karkala - 574104</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Venkatesh Hegde</p>
+    </footer>
+</body>
+</html>
